@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    background: linear-gradient(to bottom, #e0eafc 0%, #cfdef3 100%);
+    color: #333;
+}
+
+.top-container {
+    background: linear-gradient(to bottom, #a8edea 0%, #fed6e3 100%);
+    padding-top: 60px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 20%;
+    top: 40px;
+    width: 120px;
+    opacity: 0.8;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 20%;
+    bottom: 220px;
+    width: 120px;
+    opacity: 0.8;
+}
+
+.mountain {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+.title-text h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 4rem;
+    color: #ff6f61;
+    margin: 0;
+}
+
+.title-text h2 {
+    font-size: 2rem;
+    color: #40514e;
+    margin: 10px 0 0 0;
+    font-weight: 400;
+}
+
+.pro {
+    color: #66bfbf;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.middle-container {
+    background: #fff;
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(100, 100, 200, 0.08);
+    padding: 40px 32px;
+}
+
+.profile img {
+    width: 160px;
+    border-radius: 50%;
+    border: 6px solid #66bfbf;
+    margin-bottom: 16px;
+}
+
+.profile h2 {
+    color: #ff6f61;
+    margin-bottom: 8px;
+}
+
+.intro {
+    font-size: 1.1rem;
+    color: #40514e;
+    margin-bottom: 0;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #eee;
+    margin: 32px 0;
+    width: 60%;
+}
+
+.skills h2 {
+    color: #66bfbf;
+    margin-bottom: 24px;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.typing img,
+.chillies .chilli-img {
+    width: 120px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(100, 100, 200, 0.08);
+}
+
+.coding,
+.hot-wings {
+    max-width: 320px;
+}
+
+.coding h3,
+.hot-wings h3 {
+    color: #ff6f61;
+    margin-bottom: 8px;
+}
+
+.coding p,
+.hot-wings p {
+    color: #40514e;
+    font-size: 1rem;
+}
+
+.contact-me h2 {
+    color: #66bfbf;
+}
+
+.contact-me h3 {
+    color: #ff6f61;
+    margin-bottom: 8px;
+}
+
+.contact-message {
+    color: #40514e;
+    margin-bottom: 24px;
+}
+
+.btn {
+    background: linear-gradient(90deg, #66bfbf 0%, #ff6f61 100%);
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+    box-shadow: 0 2px 8px rgba(100, 100, 200, 0.08);
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #ff6f61 0%, #66bfbf 100%);
+}
+
+.bottom-container {
+    background: #66bfbf;
+    padding: 32px 0 16px 0;
+    text-align: center;
+    border-radius: 0 0 24px 24px;
+}
+
+.footer-link {
+    color: #fff;
+    margin: 0 16px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #ff6f61;
+}
+
+.copyright {
+    color: #eaf6f6;
+    font-size: 0.9rem;
+    margin-top: 16px;
+}
