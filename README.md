@@ -17,7 +17,7 @@ Game sederhana untuk melempar dadu secara acak dan menentukan pemenang antara **
 ## 🛠️ Teknologi yang digunakan
 - **HTML5** untuk struktur halaman.  
 - **CSS3** untuk styling (fonts, warna, layout).  
-- **JavaScript (Vanilla JS)** untuk logika random dadu.  
+- **JavaScript** untuk logic random dadu.  
 - **Google Fonts**: [Lobster](https://fonts.google.com/specimen/Lobster) dan [Indie Flower](https://fonts.google.com/specimen/Indie+Flower).
 
 
