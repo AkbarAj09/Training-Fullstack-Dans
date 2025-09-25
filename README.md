@@ -15,12 +15,15 @@ Aplikasi ini dibuat dengan **HTML, CSS, dan JavaScript** murni tanpa framework. 
 - **Google Fonts (Arvo)** → Tampilan font lebih menarik.
 
 ## 📂 Struktur Proyek
+```
 drum-kit/
 │── index.html # Halaman utama
 │── styles.css # Style untuk tampilan
 │── index.js # Logika interaktif drum kit
 │── sounds/ # Folder berisi file audio (tom, snare, crash, kick)
 │── images/ # Folder berisi gambar drum dll
+```
+
 
 
 ## 🚀 Cara Menggunakan
