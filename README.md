@@ -4,7 +4,6 @@ Game sederhana untuk melempar dadu secara acak dan menentukan pemenang antara **
 
 ![Preview](./images/dice6.png)
 
----
 
 ## 🚀 Fitur
 - Melempar 2 dadu secara acak saat halaman direfresh.
@@ -14,7 +13,6 @@ Game sederhana untuk melempar dadu secara acak dan menentukan pemenang antara **
   - **Player 2 Wins! 🚩**
   - **Draw!** jika angka sama.
 
----
 
 ## 🛠️ Teknologi yang digunakan
 - **HTML5** untuk struktur halaman.  
@@ -22,7 +20,6 @@ Game sederhana untuk melempar dadu secara acak dan menentukan pemenang antara **
 - **JavaScript (Vanilla JS)** untuk logika random dadu.  
 - **Google Fonts**: [Lobster](https://fonts.google.com/specimen/Lobster) dan [Indie Flower](https://fonts.google.com/specimen/Indie+Flower).
 
----
 
 ## 📂 Struktur Project
 ```
@@ -34,7 +31,6 @@ Dicee/
 └── images/ # Folder berisi gambar dadu (dice1.png ... dice6.png)
 ```
 
----
 
 ## ▶️ Cara Menjalankan
 1. Clone atau download repository ini.  
@@ -48,7 +44,6 @@ Dicee/
 3. Buka file `index.html` di browser.  
 4. Refresh halaman untuk melempar dadu dan pemenang akan muncul
 
----
 
 ## ✨ Preview
 Contoh hasil:
@@ -56,7 +51,6 @@ Contoh hasil:
 - **Player 1: 6, Player 2: 2 → 🚩 Player 1 Wins**
 - **Player 1: 4, Player 2: 4 → Draw**
 
----
 
 ## 👨‍💻 Author
 Edited by **Akbar Abdurrahman**  
