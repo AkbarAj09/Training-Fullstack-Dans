@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman produktif</title>
+  </head>
+  <body>
+    <h1>Selamat datang di halaman produktif!</h1>
+    <p>Hari ini adalah <%= dataType %>.</p>
+    <p>Tips: <%= advice %></p>
+
+    <% if(locals.numberOfLetters){ %>
+    <h2>Your name has <%= locals.numberOfLetters %> letters.</h2>
+    <% } else {
+    %>
+    <h2>Write your name below</h2>
+    <% } %>
+    <form action="/" method="POST">
+      <input type="text" name="name" required />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,8 +1,5 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
@@ -14,8 +11,46 @@ app.post('/login', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    console.log(__dirname);
-  res.sendFile(__dirname + "/public/index.html");
+    const today = new Date();
+    const day = today.getDay(); // 0 = Sunday, 6 = Saturday
+    let dataType, advice;
+
+    // Use req.headers to read a property from the request object
+    const userAgent = req.headers['user-agent'];
+
+    if (day === 0 || day === 6) {
+        dataType = 'a Weekend';
+        advice = 'Happy weekend!';
+    } else {
+        dataType = 'a Weekday';
+        advice = 'Stay productive!';
+    }
+
+    res.render('../views/index.ejs', { dataType, advice, userAgent });
+});
+
+app.post('/', (req, res) => {
+    const numLetters = req.body.name.length;
+
+    // Tambahkan kembali logika ini dari rute GET Anda
+    const today = new Date();
+    const day = today.getDay();
+    let dataType, advice;
+
+    if (day === 0 || day === 6) {
+        dataType = 'a Weekend';
+        advice = 'Happy weekend!';
+    } else {
+        dataType = 'a Weekday';
+        advice = 'Stay productive!';
+    }
+
+    // Sekarang kirim semua data yang dibutuhkan oleh template
+    res.render('../views/index.ejs', {
+        dataType: dataType,
+        advice: advice,
+        numberOfLetters: numLetters 
+    });
 });
 
 app.listen(port, () => {
