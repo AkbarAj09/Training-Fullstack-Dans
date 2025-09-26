@@ -1,9 +1,9 @@
 // import generateName from 'sillyname';
-import superheroes from 'superheroes';
+import {randomSuperhero} from 'superheroes';
 
 // const sillyname = generateName();
 // console.log(sillyname);
 
-const heroName = superheroes.random();
+const heroName = randomSuperhero();
 console.log(heroName);
 
