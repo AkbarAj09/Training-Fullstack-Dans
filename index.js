@@ -1,58 +1,66 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = 3000;
+
+// In-memory posts array
+let posts = [];
+
 app.use(bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-app.post('/login', (req, res) => {
-  const { username, password } = req.body;
-  res.send(`Login attempted! Username: ${username}, Password: ${password}`);
-});
-
+// Home page: show form and posts
 app.get('/', (req, res) => {
-    const today = new Date();
-    const day = today.getDay(); // 0 = Sunday, 6 = Saturday
-    let dataType, advice;
-
-    // Use req.headers to read a property from the request object
-    const userAgent = req.headers['user-agent'];
-
-    if (day === 0 || day === 6) {
-        dataType = 'a Weekend';
-        advice = 'Happy weekend!';
-    } else {
-        dataType = 'a Weekday';
-        advice = 'Stay productive!';
-    }
-
-    res.render('../views/index.ejs', { dataType, advice, userAgent });
-});
-
-app.post('/', (req, res) => {
-    const numLetters = req.body.name.length;
-
-    // Tambahkan kembali logika ini dari rute GET Anda
-    const today = new Date();
-    const day = today.getDay();
-    let dataType, advice;
-
-    if (day === 0 || day === 6) {
-        dataType = 'a Weekend';
-        advice = 'Happy weekend!';
-    } else {
-        dataType = 'a Weekday';
-        advice = 'Stay productive!';
-    }
-
-    // Sekarang kirim semua data yang dibutuhkan oleh template
-    res.render('../views/index.ejs', {
-        dataType: dataType,
-        advice: advice,
-        numberOfLetters: numLetters 
+    res.render('index', {
+        page: 'home',
+        posts: posts
     });
 });
 
+// News page
+app.get('/news', (req, res) => {
+    res.render('index', {
+        page: 'news',
+        posts: posts
+    });
+});
+
+// About page
+app.get('/about', (req, res) => {
+    res.render('index', {
+        page: 'about',
+        posts: posts
+    });
+});
+
+// Add post
+app.post('/add-post', (req, res) => {
+    const { title, content } = req.body;
+    if (title && content) {
+        const newPost = { 
+            id: Date.now(), 
+            title, 
+            content 
+        };
+        posts.unshift(newPost);
+    }
+    res.status(201).json({ message: 'Post created successfully' });
+});
+
+// Ganti app.post menjadi app.put
+app.put('/delete-post/:id', (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    posts = posts.filter(p => p.id !== id); 
+
+    res.status(200).json({ message: 'Post deleted successfully' });
+});
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port ${port}`);
 });
