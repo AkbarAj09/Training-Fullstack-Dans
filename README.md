@@ -35,6 +35,7 @@ Proyek ini adalah **aplikasi login sederhana** yang dibangun menggunakan **Node.
 
 
 ## 📂 Struktur Proyek
+```bash
 login-project/
 │── public/
 │   └── index.html    # Halaman login
