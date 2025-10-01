@@ -32,45 +32,7 @@ Proyek ini adalah **aplikasi login sederhana** yang dibangun menggunakan **Node.
 
 ---
 
-## 📂 Struktur Proyek
-```bash
-Tentu, ini draf README.md untuk proyek login Anda, dengan struktur dan gaya yang sama seperti contoh yang Anda berikan.
 
-Markdown
-
-# 🔐 Simple Login System with Node.js & Express.js
-
-Proyek ini adalah **aplikasi login sederhana** yang dibangun menggunakan **Node.js dan Express.js**. Aplikasi ini menyajikan halaman login statis, memvalidasi input pengguna di sisi server, dan memberikan respons dinamis berdasarkan waktu.
-
----
-
-## 🎯 Overview
-- Halaman **utama** (`/`) adalah form login statis yang disajikan dari file `index.html`.
-- Pengguna memasukkan **username** dan **password**.
-- Server memvalidasi password yang dikirim. Password untuk saat ini di-hardcode (`"123"`).
-- Jika berhasil, server akan merespons dengan halaman sambutan dinamis yang berisi **salam sesuai waktu** (selamat pagi, siang, sore, atau malam).
-- Jika gagal, pengguna akan diarahkan kembali ke halaman login.
-
----
-
-## ✨ Fitur
-- Form login dengan validasi di sisi server.
-- Halaman sambutan dinamis dengan nama pengguna.
-- Salam yang berubah-ubah mengikuti waktu server (Pagi, Siang, Sore, Malam).
-- Pengalihan (redirect) otomatis jika login gagal.
-- Melayani file statis (HTML, CSS, JS) dari folder `public`.
-- Menggunakan middleware `morgan` untuk logging permintaan HTTP.
-
----
-
-## 🛠️ Teknologi yang Digunakan
-- **Node.js** → Runtime JavaScript.
-- **Express.js** → Framework web backend.
-- **Body-parser** → Middleware untuk menangani data dari form.
-- **Morgan** → Middleware untuk request logger.
-- **HTML** → Untuk halaman antarmuka pengguna.
-
----
 
 ## 📂 Struktur Proyek
 login-project/
