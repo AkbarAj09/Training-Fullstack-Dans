@@ -9,7 +9,6 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = 3000;
 
-// In-memory posts array
 let posts = [];
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -54,13 +53,18 @@ app.post('/add-post', (req, res) => {
     res.status(201).json({ message: 'Post created successfully' });
 });
 
-// Ganti app.post menjadi app.put
 app.put('/delete-post/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
     posts = posts.filter(p => p.id !== id); 
-
     res.status(200).json({ message: 'Post deleted successfully' });
 });
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+
+// Jalankan server HANYA untuk development lokal
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () => {
+        console.log(`Server is running on port ${port}`);
+    });
+}
+
+
+export default app;
