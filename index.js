@@ -1,5 +1,5 @@
 import express from "express";
-import { dirname } from "path";
+import path, { dirname } from "path";
 import bodyParser from "body-parser";
 import { fileURLToPath } from "url";
 import morgan from "morgan";
@@ -31,7 +31,6 @@ app.post('/home', (req, res) => {
             greeting = "selamat malam";
         }
 
-        // Mengirim HTML dinamis sebagai respons
         res.status(200).send(`
             <!DOCTYPE html>
             <html lang="en">
@@ -48,17 +47,14 @@ app.post('/home', (req, res) => {
         `);
     } else {
         res.status(401).send("Invalid password!");
-        res.redirect('/');
     }
 });
 
 app.get("/", (_req, res) => {
-    // Arahkan ke file index.html di dalam folder public
-    res.status(200);
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Jalankan server HANYA untuk development lokal
+
 if (process.env.NODE_ENV !== 'production') {
     app.listen(port, () => {
         console.log(`Server is running on port ${port}`);
